@@ -1,0 +1,236 @@
+/*  
+Theme Name: WSU
+Author: MNEC
+Description: A Theme based on the default WSU web template design
+Version: 2.1
+Template: wip
+*/
+
+@charset "utf-8";
+
+/*** HTML5 ✰ Boilerplate. Detailed information about this CSS:h5bp.com/css ***/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display:block; }
+audio, canvas, video { display:inline-block; *display:inline; *zoom:1; }
+audio:not([controls]) { display:none; }
+[hidden] { display:none; }
+html { font-size:100%; overflow-y:scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+::-moz-selection { background:#981E32; color:#fff; text-shadow:none; }
+::selection { background:#981E32; color:#fff; text-shadow:none; }
+abbr[title] { border-bottom:1px dotted; }
+b, strong { font-weight:bold; }
+blockquote { margin:1em 40px; }
+dfn { font-style:italic; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+ins { background:#ff9; color:#000; text-decoration:none; }
+mark { background:#ff0; color:#000; font-style:italic; font-weight:bold; }
+pre, code, kbd, samp { font-family:monospace, monospace; _font-family:'courier new', monospace; font-size:1em; }
+pre { white-space:pre; white-space:pre-wrap; word-wrap:break-word; }
+q { quotes:none; }
+q:before, q:after { content:""; content:none; }
+small { font-size:85%; }
+sub, sup { font-size:75%; line-height:0; position:relative; vertical-align:baseline; }
+sup { top:-0.5em; }
+sub { bottom:-0.25em; }
+ul, ol { margin:1em 0; padding:0 0 0 40px; }
+dd { margin:0 0 0 40px; }
+nav ul, nav ol { list-style:none; list-style-image:none; margin:0; padding:0; }
+img { border:0; -ms-interpolation-mode:bicubic; }
+svg:not(:root) { overflow:hidden; }
+figure { margin:0; }
+form { margin:0; }
+fieldset { border:0; margin:0; padding:0; }
+label { cursor:pointer; }
+legend { border:0; *margin-left:-7px; padding:0; }
+button, input, select, textarea { font-size:100%; margin:0; vertical-align:baseline; *vertical-align:middle; }
+button, input { line-height:normal; *overflow:visible; }
+table button, table input { *overflow:auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; -webkit-appearance:button; }
+input[type="checkbox"], input[type="radio"] { box-sizing:border-box; }
+input[type="search"] { -webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance:none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border:0; padding:0; }
+textarea { overflow:auto; vertical-align:top; resize:vertical; }
+input:invalid, textarea:invalid { background-color:#f0dddd; }
+table { border-collapse:collapse; border-spacing:0; }
+
+/*** Added elements, sizes, colors, etc. ***/
+/*img, object, embed, video, iframe { height:auto; max-width:100%; }*/
+#content img, .wp-caption {
+  max-width: 100%;
+}
+#content img {
+	height: auto;
+}
+video {
+  width: 100%  !important;
+  height: auto !important;
+}
+embed,
+iframe,
+object,
+video {
+	margin-bottom: 12px;
+	max-width: 100%;
+}
+iframe { display:none; }
+div iframe, #wrapper iframe, #sb-container iframe { display:inline-block; }
+a:focus { outline:thin dotted; }
+a:hover, a:active { outline:0; }
+a:visited { color:#5e6a71; text-decoration:underline; }
+a:hover { color:#981e32; text-decoration:none; }
+#content #fourth ul, #content #fourth ol { line-height:1.6em; margin-top:0px; padding-top:0px; padding-bottom:0px; margin-bottom:0px; }
+#content #fourth ul { list-style-type:square; margin-left:15px; padding:0px 0px 0px 20px; }
+#content #fourth li { margin:5px 0; padding:0px; }
+#content ul, #content ol { margin-bottom:17px; }
+#content li ul, #content li ol { margin-bottom:0; }
+input::-webkit-input-placeholder { color:#5e6a71; }
+input:-moz-placeholder { color:#5e6a71; }
+input:-ms-input-placeholder { color:#5e6a71; }
+input[placeholder], [placeholder], *[placeholder] { color:#5e6a71; }
+h1#pagetitle { float:left; font-size:1.625em; padding:10px 0 6px 0; width:100%; }
+.odd { border-top:1px solid #ebebed; border-bottom:1px solid #ebebed; background:#f8f8f8; }
+.odd, .even { padding:12px 12px 0; }
+.alignright { float:right; margin-left:15px; text-align:center; }
+.alignleft { float:left; margin-right:15px; text-align:center; }
+.aligncenter { margin:0 auto; text-align:center; }
+#content p.wp-caption-text { color:#262a2d; font-size:.8em; font-weight:normal; letter-spacing:0em; line-height:1.7em; margin:0px; padding:5px 0px; text-align:center; }
+.half { float:left; width:50%; }
+.met-com { border-bottom:1px dotted #b6bcbf; border-top:1px dotted #b6bcbf; clear:both; margin-bottom:12px; overflow:auto; padding:5px 0; width:100%; }
+#content .met-com .met, #content .met-com .com { float:left; padding-bottom:0; }
+.met-com .met { width:80%; }
+.met-com .com { text-align:right; width:20%; }
+#cancel-comment-reply-link { float:right; font-size:12px; }
+#content ul li p { padding-bottom:0; }
+.trigger { color: #003c69; cursor:pointer; text-decoration:underline; }
+.trigger:hover { color: #981e32; text-decoration: none; }
+.trigger::after { content:" +"; }
+.trigger.active::after { content:" -"; }
+#wpstats { visibility:hidden; }
+/* Tab stuff */
+#tabheader { background:url("images/tabs-bg.gif") repeat-x bottom #fff; float:left; height:25px; line-height:normal; margin:10px -22px 20px -22px; text-align:center; width:775px; }
+#content #main #tabheader ul { display:inline-block; line-height:normal; list-style-type:none; margin:0px auto; padding:0px 22px; }
+#content #main #tabheader ul li { background:url("images/tabs-left.gif") no-repeat left top; float:left; line-height:normal; margin:0; padding:0 0 0 9px; }
+#content #main #tabheader a { background:url("images/tabs-right.gif") no-repeat right top; color:#5e6a71; display:block; float:left; font-weight:bold; padding:5px 15px 4px 6px; text-decoration:none; }
+#content #main #tabheader a:hover { color:#333; }
+#content #main #tabheader ul li.current { background-image:url("images/tabs-left_on.gif"); }
+#content #main #tabheader ul li.current a { background-image:url("images/tabs-right_on.gif"); color:#333; padding-bottom:5px; }
+#tribe-events-loop { font-size:1em; }
+.events-archive .tribe-events-event-entry p, .venue-events .tribe-events-event-entry p { font-size:1em; }
+#respond { clear:both; }
+
+/*** Mobile Layout: 480px and below. ***/
+@media only screen and (max-width:769px) {
+	#globalnav, #toolbar, #sitenav_toggle, #nav, #home, #siteID h2 { display:none; }
+	#wrapper { background:none; padding:0; width:100%; }
+	#logo { background:url("images/wsu-logo-m.png") center top no-repeat; clear:none; display:block; height:64px; width:22%; }
+	#logo a { display:block; height:64px; margin:0 auto; width:72px; }
+	#logo a img { display:none; }
+	#siteID { background:none; margin-left:1.34%; padding:0; width:76.66%; }
+	#siteID h2#mobile { display:block; padding:6px 0; width:auto; }
+	#siteID h1 { font-size:1.125em; font-weight:bold; padding:6px 0 7px 0; width:auto; }
+	#siteID h1 a { text-decoration:none; }
+	#content { background:none; clear:both; display:block; float:left; margin:0 auto; padding:0 2.2%; width:95.6%; }
+	#mobilenav { display:block; clear:both; float:left; font-size:0.75em; margin:15px 0 5px; width:100%; }
+	#compoundnav { border:1px solid #B6BCBF; display:inline-block; float:left; height:30px; line-height:30px; padding:4px; width:90%; }
+	#compoundsearch_toggle { float:left; text-align:center; width:10%; }
+	#compoundsearch_toggle a { background:url("images/search-m.png") center no-repeat #e7e9ea; border:1px solid #B6BCBF; display:block; float:right; height:28px; text-indent:-9999px; width:28px; }
+	#compoundsearch { clear:both; float:left; margin:10px 0 5px 0; text-align:center; width:100%; }
+	#compoundsearch form { clear:both; height:30px; margin-bottom:10px; width:100%; }
+	#compoundsearch .msearch_input { border:1px solid #b6bcbf; border-right:none; color:#5e6a71; height:12px; padding:8px; vertical-align:middle; width:84%; }
+	#compoundsearch .msearch_submit { background:url("images/search-m.png") center no-repeat #e7e9ea; border:1px solid #b6bcbf; clear:none; height:30px; overflow:hidden; text-indent:-999em; vertical-align:middle; width:30px; }
+	h1#pagetitle { padding:10px 0 6px 0; }
+	#main, #wrapper #content #secondary, #additional, #fourth { display:block; float:left; margin:0; padding:10px 0 0; width:100%; }
+	#wrapper #content #secondary { background:none; }
+	#wrapper #content #localfooter, #wsufooter { background:none; clear:both; float:left; margin:20px auto; padding:0 2%; width:96%; }
+	#wsufooter { height:20px; }
+}
+
+/*** Tablet Layout: 481px to 768px. Inherits styles from Mobile Layout. ***/
+@media only screen and (min-width:481px) and (max-width:769px) {
+	#compoundnav, #siteID h2#mobile { display:none; }
+	#globalnav { clear:none; color:#5e6a71; display:block; margin:0 0 0 15%; width:85%; }
+	#globalnavsearchform { display:none; }
+	#logo { background:url("images/wsu-logo-t.png") center top no-repeat; float:left; height:80px; margin-left:1%; width:150px; }
+	#logo a { height:80px; width:150px; }
+	#siteID { float:none; height:80px; margin-left:30%; width:70%; }
+	#siteID h2 { color:#5e6a71; display:block; font-weight:normal; letter-spacing:-0.1em; line-height:1.5em; padding:10px 0px 0px 22px; width:auto; }
+	#siteID h2 a { color:#5e6a71; }
+	#siteID h1 { display:block; font-size:1.5em; font-weight:bold; margin:0; padding:0 0 0 22px; }
+	#mobilenav { clear:none; margin:0; padding:12px 0 0 0; width:100%; }
+	#sitenav_toggle { display:block; }
+	#sitenav_toggle a { background:url("images/menu-t.png") center no-repeat #e7e9ea; border:1px solid #B6BCBF; display:block; float:right; height:28px; text-indent:-9999px; width:28px; }
+	#sitenav_toggle, #compoundsearch_toggle { float:left; margin:0 10px 10px 0; width:auto; }
+	#nav { background:none; padding:15px 0 0 0; width:100%; }
+	#wrapper #content #nav #featured { background:none; }
+	#nav ul { padding:0; }
+	h1#pagetitle { padding:20px 0 6px 0; }
+	#main, #wrapper #content #secondary, #additional, #fourth { background:#fff; padding:20px 0 0; }
+	#wrapper #content #secondary { margin:0; }
+}
+
+/*** Desktop Layout: 769px to a max of 986px. Inherits styles from Mobile Layout and Tablet Layout. ***/
+@media only screen and (min-width:769px) and (max-width:986px) {
+	#mobilenav { display:none; }
+	#wrapper { background:url("http://images.wsu.edu/global/gen2images/bg-shadows2.jpg") 100% 30px no-repeat; display:inline-block; padding:0 1% 0 1%; width:98%; }
+	#globalnav { width:100%; }
+	#wrapper #content { width:100%; }
+	#logo { width:19.3%; }
+	#siteID { width:80.7%; }
+	#siteID h1, #siteID h2 { padding-left:2.8%; width:90.2%; }
+	#wrapper #toolbar { padding-right:2.3%; width:78.4%; }
+	#toolbar ul { padding:0px; }
+	#wrapper #content {
+		background:rgb(255,255,255); /* Old browsers */
+		background:-moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 19%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+		background:-webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(19%,rgba(255,255,255,0)), color-stop(19%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+		background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 19%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+		background:-o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 19%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+		background:-ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 19%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%); /* IE10+ */
+		background:linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 19%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%); /* W3C */
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeff1', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+	}
+	#nav { padding:0 1% 100px 2.5%; width:15.7%; }
+	#home { background:#fff; clear:none; width:80.6%; }
+	#main, #wrapper #content #secondary, #additional, #fourth { background-color:#fff; }
+	#wrapper #content #localfooter { background:#fff; margin-left:19.2%; padding:65px 2% 20px 2%; width:76.8%; }
+	#wsufooter { background:none; padding:40px 1.6% 0 19.8%; width:78.6%; }
+}
+
+/*** WSU CSS Design key overrides, added elements, and WordPress stuff ***/
+@media only screen and (min-width:769px) {
+	#siteID h2#mobile { display:none; }
+	#siteID h1 { width:97%; }
+	#siteID h1 a, #siteID h2 a,#siteID h1 a:hover, #siteID h2 a:hover,#siteID h1 a:visited, #siteID h2 a:visited { text-decoration:none; color:#fff; }
+	#nav { display:block !important; min-height:255px; }
+	#wrapper #content #secondary { min-height:280px; }
+	#content #main ul, #content #secondary ul, #content #additional ul,#content #main ol, #content #secondary ol, #content #additional ol { margin-bottom:17px; }
+	#content #main li ul, #content #secondary li ul, #content #additional li ul,#content #main li ol, #content #secondary li ol, #content #additional li ol { margin-bottom:0; }
+	#mobilenav { display:none; }
+	#compoundsearch { display:none !important; }
+	#toolbar #breadcrumb { float:left; margin-left:22px; }
+	#sitesearch { display:inline; }
+	#sitesearch_input { border:none; color:#5E6A71; font-family:"Lucida Grande","Lucida Sans Unicode",Arial,san-serif; font-size:x-small; height:12px; text-align:center; width:50px; }
+	#sitesearch_submit { background:url("images/search.png") center no-repeat #fff; border:none; height:14px; margin:0; padding:0; text-indent:-999em; width:14px; }
+	#wrapper #content #secondary iframe { height:158px !important; width:189px !important; }
+	h1#pagetitle { padding:20px 0 6px 2.2%; width:76.3%; }
+}
+
+/*** Print ***/
+ @media print  { 
+  * { background:transparent !important; color:black !important; text-shadow:none !important; filter:none !important; -ms-filter:none !important; }
+  a, a:visited { text-decoration:underline; }
+  pre, blockquote { border:1px solid #999; page-break-inside:avoid; }
+  thead { display:table-header-group; }
+  tr, img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+  @page { margin:0.5cm; }
+  p, h2, h3 { orphans:3; widows:3; }
+  h2, h3 { page-break-after:avoid; }
+	#content { color:#2d2d2d; }
+	#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 { color:#555555; }
+	#siteID h1 a { color:000; text-decoration:none; }
+	
+	#globalnav, #mobilenav, #siteID h2#mobile, #nav {
+		display: none !important;
+	}
+}
