@@ -25,8 +25,10 @@ if( $redirect ) {
 					( $layoutMeta['layout'] != '' || $layoutMeta['layout'] != '0' )
 				) ||
 				( isset( $layoutMeta['page_type'] ) && $layoutMeta['page_type'] == 'dynamic' )
-		)
-			$content = split( "<!--more-->", $post->post_content );
+		) {
+			// Double angle brackets are necessary for the pattern to match.
+			$content = preg_split( "<<!--more-->>", $post->post_content );
+		}
 
 		// Do slideshow stuff if this page has one and the site is in the WSU theme
 		if( wp_get_theme()->Name != 'WIP' &&
